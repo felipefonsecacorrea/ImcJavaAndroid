@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".MainActivity" android:background="#000417">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" app:layout_anchorGravity="center" android:id="@+id/constraintLayout"
+            app:layout_anchor="@+id/constraintLayout">
+
+        <TextView
+                android:text="@string/tituloImc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/text_imc"
+                android:textSize="34sp" android:textColor="#FFFFFF"
+                android:textStyle="bold|italic" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.084" android:textIsSelectable="false"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/text_resultado_classificacao"
+                android:textColor="#FFFFFF" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintVertical_bias="0.191" android:visibility="invisible"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/text_resultado_calculo"
+                android:textColor="#FFFFFF" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.251" android:visibility="invisible"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_altura"
+                android:textColor="#FFFFFF" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.454"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/input_peso"
+                android:textColor="#FFFFFF" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.497" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.619"/>
+        <TextView
+                android:text="@string/titiuloInputAltura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/text_titulo_altura"
+                android:textColor="#FFFFFF" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.411"/>
+        <TextView
+                android:text="@string/titiuloInputPeso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/text_titulo_peso"
+                android:textColor="#FFFFFF" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.498" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.57"/>
+        <Button
+                android:text="@string/titiuloConverter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button_calcular"
+                android:textColor="#FFFFFF" android:backgroundTint="#007483"
+                android:textSize="20sp" android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.764"/>
+        <Button
+                android:text="@string/titiuloLimpar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/button_limpar"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/button_calcular" app:layout_constraintVertical_bias="0.176"
+                android:backgroundTint="#9C27B0"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
