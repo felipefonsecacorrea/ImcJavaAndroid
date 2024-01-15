@@ -59,6 +59,12 @@ public class MainActivity extends AppCompatActivity {
                 if (valorImc < 18.5){
                     resultadoClassificacao.setText(String.valueOf(text3));
                     resultadoClassificacao.setVisibility(View.VISIBLE);
+                }else if(valorImc < 25){
+                    resultadoClassificacao.setText(String.valueOf(text2));
+                    resultadoClassificacao.setVisibility(View.VISIBLE);
+                }else{
+                    resultadoClassificacao.setText(String.valueOf(text1));
+                    resultadoClassificacao.setVisibility(View.VISIBLE);
                 }
 
 
