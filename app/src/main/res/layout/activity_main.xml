@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true"
-        tools:context=".MainActivity" android:background="#000417">
+        tools:context=".MainActivity" android:background="#080B1C">
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent" app:layout_anchorGravity="center" android:id="@+id/constraintLayout"
@@ -78,7 +78,7 @@
                 android:text="@string/titiuloConverter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/button_calcular"
-                android:textColor="#FFFFFF" android:backgroundTint="#007483"
+                android:textColor="#FFFFFF" android:backgroundTint="#225501"
                 android:textSize="20sp" android:textStyle="bold" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
@@ -91,6 +91,6 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button_calcular" app:layout_constraintVertical_bias="0.176"
-                android:backgroundTint="#9C27B0"/>
+                android:backgroundTint="#5A2700"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
