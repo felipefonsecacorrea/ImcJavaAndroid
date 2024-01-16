@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 EditText peso = findViewById(R.id.input_peso);
 
                 altura.setText(String.valueOf(" "));
-                peso.bsetText(String.valueOf(" "));
+                peso.setText(String.valueOf(" "));
 
                 resultadoImc.setVisibility(View.INVISIBLE);
                 resultadoClassificacao.setVisibility(View.INVISIBLE);
