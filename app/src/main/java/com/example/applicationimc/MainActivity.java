@@ -31,10 +31,30 @@ public class MainActivity extends AppCompatActivity {
 
         Button botaoCalcular = findViewById(R.id.button_calcular);
 
+        Button botaoClear = findViewById(R.id.button_limpar);
+
         TextView resultadoImc = findViewById(R.id.text_resultado_calculo);
         
         TextView resultadoClassificacao = findViewById(R.id.text_resultado_classificacao);
-        
+
+        botaoClear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                limpartudo();
+            }
+
+            private void limpartudo() {
+                EditText altura = findViewById(R.id.input_altura);
+                EditText peso = findViewById(R.id.input_peso);
+
+                altura.setText(String.valueOf(" "));
+                peso.bsetText(String.valueOf(" "));
+
+                resultadoImc.setVisibility(View.INVISIBLE);
+                resultadoClassificacao.setVisibility(View.INVISIBLE);
+            }
+        });
+
         botaoCalcular.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -58,16 +78,12 @@ public class MainActivity extends AppCompatActivity {
 
                 if (valorImc < 18.5){
                     resultadoClassificacao.setText(String.valueOf(text3));
-                    resultadoClassificacao.setVisibility(View.VISIBLE);
                 }else if(valorImc < 25){
                     resultadoClassificacao.setText(String.valueOf(text2));
-                    resultadoClassificacao.setVisibility(View.VISIBLE);
                 }else{
                     resultadoClassificacao.setText(String.valueOf(text1));
-                    resultadoClassificacao.setVisibility(View.VISIBLE);
                 }
-
-
+                resultadoClassificacao.setVisibility(View.VISIBLE);
             }
         });
     }
